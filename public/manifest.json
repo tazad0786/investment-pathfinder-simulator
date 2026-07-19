@@ -1,0 +1,29 @@
+{
+  "background_color": "#4b7f88",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "investment-pathfinder-simulator.onrender",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "investment-pathfinder-simulator.onrender",
+  "start_url": "https://investment-pathfinder-simulator.onrender.com/",
+  "theme_color": "#68537e",
+  "icons": [
+    {
+      "src": "https://investment-pathfinder-simulator.onrender.com/favicon.ico",
+      "type": "image/x-icon",
+      "isSquare": false,
+      "isPng": false,
+      "isWebp": false,
+      "isJpg": false,
+      "width": 0,
+      "is512x512": false,
+      "is256x256": false,
+      "is192x192": false
+    }
+  ],
+  "lang": "en",
+  "categories": [
+    "finance"
+  ]
+}

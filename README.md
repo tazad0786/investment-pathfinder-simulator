@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div align="center">
 <img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
 </div>
@@ -18,3 +19,7 @@ View your app in AI Studio: https://ai.studio/apps/e3630ad4-175a-4bb1-86c3-22688
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
+=======
+# investment-pathfinder-simulator
+ WealthWise.ai App -  Guide for financial freedom
+>>>>>>> 4ae017d22980445ab54560aed15e0f220a504391
