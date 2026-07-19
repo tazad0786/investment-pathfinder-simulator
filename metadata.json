@@ -1,0 +1,6 @@
+{
+  "name": "Investment Pathfinder & Simulator",
+  "description": "An advanced full-stack investment simulator, featuring step-by-step risk profiling pathfinders, interactive compound calculators, live stock pricing feeds, and a server-side Gemini AI financial advisor.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
