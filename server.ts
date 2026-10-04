@@ -7,7 +7,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const app = express();
-const PORT = 3000;
+const PORT = Number(process.env.PORT) || 3000;
 
 app.use(express.json());
 
@@ -93,7 +93,7 @@ Always remind the user professionally: 'Mutual fund investments are subject to m
     }));
 
     const response = await ai.models.generateContent({
-      model: "gemini-3.5-flash",
+      model: process.env.GEMINI_MODEL || "gemini-3.5-flash",
       contents: contents,
       config: {
         systemInstruction: systemInstruction,
