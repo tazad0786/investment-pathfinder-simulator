@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { mockStocks, mockMutualFunds } from '../data/mockData';
+import { useStore } from '../store/StoreContext';
 import { UserProfile, Stock, MutualFund } from '../types';
 import { 
   Compass, Shield, Landmark, Target, Sparkles, 
@@ -13,6 +13,9 @@ interface DecisionWizardProps {
 }
 
 export default function DecisionWizard({ onCompleteProfile, onExploreStock, onExploreFund }: DecisionWizardProps) {
+  const { state } = useStore();
+  const mockStocks = useMemo(() => state.stocks.filter((s) => s.instrument === 'EQ').sort((a, b) => b.marketCapCr - a.marketCapCr), [state.stocks]);
+  const mockMutualFunds = useMemo(() => [...state.funds].sort((a, b) => b.rating - a.rating || b.cagr3y - a.cagr3y), [state.funds]);
   const [step, setStep] = useState<number>(1);
   
   // Quiz states
@@ -95,7 +98,7 @@ export default function DecisionWizard({ onCompleteProfile, onExploreStock, onEx
       adviceText = "You have an appetite for high growth and understand that short-term volatility yields massive compounding returns over the long term. We recommend Small Cap equity funds and high-growth consumer stocks.";
       
       matchedStocks = mockStocks.filter(s => s.risk === 'High');
-      matchedFunds = mockMutualFunds.filter(f => f.category === 'Equity' && f.riskRating === 'High');
+      matchedFunds = mockMutualFunds.filter(f => f.category === 'Equity' && (f.riskRating === 'High' || f.riskRating === 'Very High'));
     } else {
       // Moderate
       equityPercentage = 50;
